@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Dropdown = () => {
+const Dropdown = (props) => {
     return(
         <div>
-            <h1>example dropdown</h1>
-            <select id="year" name="year">
-                <option> 2006</option>
-                <option> 2017</option>
+            <select>
+                {props.selectOptions.map((dropdownItem, i) => (
+                    <option>{dropdownItem}</option>
+                ))}
             </select>
 
         </div>

@@ -1,22 +1,13 @@
 import React from 'react'
 
-const Table = () => {
+const Table = (props) => {
     return(
         <div>
             <table className="table">
                 <tr>
-                    <th>Jan</th>
-                    <th>Feb</th>
-                    <th>Mar</th>
-                    <th>Apr</th>
-                    <th>May</th>
-                    <th>Jun</th>
-                    <th>Jul</th>
-                    <th>Aug</th>
-                    <th>Sep</th>
-                    <th>Oct</th>
-                    <th>Nov</th>
-                    <th>Dec</th>
+                    {props.months.map((month, i) => (
+                        <th>{month}</th>
+                    ))}
                 </tr>
                 <tr>
                     <td>test</td>

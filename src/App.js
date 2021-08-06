@@ -20,7 +20,9 @@ const typesOfData = [
 
 const years = [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]
 
-const airportCodes = []
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+const airportCodes = ['ATL','DFW','DEN','ORD','LAX','CLT','LAS','PHX','MCO','SEA','MIA','IAH','JFK','FLL','SFO','EWR','MSP','DTW','BOS','SLC','PHL','BWI','TPA','SAN','MDW','IAD','BNA','LGA','DAL','DCA','PDX']
 
 console.log(years)
 
@@ -44,8 +46,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Dropdown />
-        <Table />
+        <Dropdown selectOptions={years}/>
+        <Dropdown selectOptions={typesOfData}/>
+        <Dropdown selectOptions={airportCodes}/>
+        <Table months={months}/>
 
       </header>
     </div>
